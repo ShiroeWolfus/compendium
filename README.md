@@ -1,2 +1,2 @@
-# compendium
+# Compendium
 A game library resume
