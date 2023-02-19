@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dashboard</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <script src="/app.js"></script>
+        <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        
+        <nav id="plateform">
+            <input type="button" id="colaps" value="Display/none Manipulation Base de Données">
+            <menu id="menu_deroul" >
+                <li id="menu1"><a href="#">Création d'un nouveau jeu</a></li>
+                <li id="menu2"><a href="#">Récupérer tous les jeux d'une classe</a></li>
+                <li id="menu3"><a href="#">Récupérer un jeu par son ID</a></li>
+                <li id="menu4"><a href="#">Récupérer un jeu par son nom</a></li>
+                <li id="menu5"><a href="#">Mise à jour d'un jeu par son ID</a></li>
+                <li id="menu6"><a href="#">Supprimer un jeu par son ID</a></li>
+            </menu>
+    </header>
+
+    <h1>Compendium</h1>
+    <p>- A Game Library -</p>
+    <div>
+
+        <h2>Affichage des jeux par librairie</h2>
+            <div>
+                <!-- <button id = "get-all-jeux">Voir tous les jeux</button> -->
+                <div id="results-all-game"></div>
+            </div>
+
+        <h2>Récupérer tous les jeux d'une classe</h2>
+            <div>
+                <label for="name">Catégorie</label>
+                <select id="categorie-get-categorie">
+                    <option value="epic">Epic</option>
+                    <option value="steam">Steam</option>
+                </select>
+                <button id="get-categorie-button">Afficher la classe</button>
+            </div>
+
+        <h2>Création d'un nouveau jeu</h2>
+            <div>    
+                <label for="name">Catégorie</label>
+                <select id="categorie-create-game">
+                    <option value="epic">Epic</option>
+                    <option value="steam">Steam</option>
+                </select>
+                <label for="name">Nom du jeu</label>
+                <input type="text" id="name-create-game"/>
+                <label for="name">Statut du jeu</label>
+                <select id="value-create-game">
+                    <option value="wishlist">Liste de souhaits</option>
+                    <option value="inside">Déjà acheté</option>
+                    <option value="on-it">En cours</option>
+                    <option value="finish">Terminé</option>
+                    <option value="not-played">Jamais lancé</option>
+                </select>
+                <button id="create-button">Créer un jeu</button>
+            </div>
+
+        <h2>Récupérer un jeu par son ID</h2>
+            <div>
+                <label for="name">Catégorie</label>
+                <select id="categorie-get-id-game">
+                    <option value="epic">Epic</option>
+                    <option value="steam">Steam</option>
+                </select>
+                <label for="id">N° du jeu</label>
+                <input type="number" id="id-get-id-game"/>
+                <button id="get-id-button">Récupérer un jeu</button>
+                <div id="results-get-one"></div>
+            </div>
+
+        <h2>Récupérer un jeu par son nom</h2>
+            <div>
+                <label for="name">Catégorie</label>
+                <select id="categorie-get-name-game">
+                    <option value="epic">Epic</option>
+                    <option value="steam">Steam</option>
+                </select>
+                <label for="name">Nom du jeu</label>
+                <input type="text" id="name-get-name-game"/>
+                <button id="get-name-button">Récupérer un jeu</button>
+                <div id="results-get-name"></div>
+            </div>
+
+        <h2>Mise à jour d'un jeu par son ID</h2>
+            <div>
+                <label for="name">Catégorie</label>
+                <select id="categorie-update-game">
+                    <option value="epic">Epic</option>
+                    <option value="steam">Steam</option>
+                </select>
+                <label for="id">N° du jeu</label>
+                <input type="number" id="id-update-game"/>
+                <label for="name">Statut du jeu</label>
+                <select id="value-update-game">
+                    <option value="wishlist">Liste de souhaits</option>
+                    <option value="inside">Déjà acheté</option>
+                    <option value="on-it">En cours</option>
+                    <option value="finish">Terminé</option>
+                    <option value="not-played">Jamais lancé</option>
+                </select>
+                <button id="update-button">Mettre à jour le jeu</button>
+            </div>
+
+        <h2>Supprimer un jeu par son ID</h2>
+            <div>
+                <label for="name">Catégorie</label>
+                <select id="categorie-delete-game">
+                    <option value="epic">Epic</option>
+                    <option value="steam">Steam</option>
+                </select>
+                <label for="id">N° du jeu</label>
+                <input type="number" id="id-delete-game"/>
+                <button id="delete-button">Supprimer un jeu</button>
+            </div>
+    </div>
+</body>
+</html>
